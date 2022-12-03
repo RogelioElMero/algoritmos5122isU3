@@ -1,38 +1,66 @@
-using System.Linq;
+﻿using System.Linq;
+using System.Collections.Generic;
+
 using System;
 using System.Threading;
 
 namespace Main
 {
-    public class intento_de_los_7_arrays
+    public class main
     {
         //array con palabras
         static string[] palabras = new string[]
            {
-                                                "cuadrado", "trapecio", "estrella", "cubo", "circulo",
-                                                "rombo", "triangulo" ,"rectangulo","hexagono","pentagrama",
-                                                "naranja","durazno","kiwi","fresa","manzana",
-                                                "mandarina","aguacate","platano","pera","sandia",
-                                                "animales","perro","gato","vaca","caballo",
-                                                "serpiente","ardilla","raton","pajaro","cabra",
-                                                "burro","toro","aguila","ballena","pulpo",
-                                                "amarillo","azul","blanco","verde","morado",
-                                                "parangaricutirimicuaro"
+               //20 figuras
+               "cuadrado", "trapecio", "estrella", "cubo", "circulo",
+               "rombo", "triangulo" ,"rectangulo","hexagono","pentagrama",
+               "trapecio","trapezoide","piramide","esfera","pentagono",
+               "octagono","romboide","cilindro","cono","paralelogramo",
+               
 
+               //20 frutas
+               "naranja","durazno","kiwi","fresa","manzana",
+               "mandarina","aguacate","platano","pera","sandia",
+               "piña","arandano","granada","mango","limon",
+               "cerezas","aceitunas","mora","uva","guayaba",
+
+               //20 animales
+               "conejo","perro","gato","vaca","caballo",
+               "serpiente","ardilla","raton","pajaro","cabra",
+               "burro","toro","aguila","ballena","pulpo","loro",
+               "panda","jirafa","canguro","koala","leon",
+
+               //20 colores
+               "amarillo","azul","blanco","verde","morado",
+               "turquesa","magenta","cian","rosado","lila",
+               "fucsia","purpura","violeta","marron","negro",
+               "rosa","neon","rojo","oro","plata",
+
+               //6 palabras largas 
+               "parangaricutirimicuaro","esternocleidomastoideo","anticonstitucionalidad","electroencefalografia","otorrinolaringologico",
+               "constitucionalizacion",
+
+               //30 palabras de programacion
+               "clase","lenguaje","estructura","objeto","herencia",
+               "abstraccion","polimorfismo","c#","java","javascript",
+               "compilador","diagrama","static","public","private",
+               "constructor","variable","dato","comentario","concatenar",
+               "software","biblioteca","paquete","driver","sentencia",
+               "bucle","constante","funcion","debuggear","repositorio",
            };
 
         static void Main(string[] args)
         {
 
             string palabra, Frase, opcion = "", nombre = "";
-            int vidas, time = 200;
+            int vidas, time = 200,inicio=0,final=0,grupo;
             Boolean finish = false;
             char p = ' ';
             char[] letras;
             char[] jugador;
 
             //consulta su nombre 
-
+          
             Console.WriteLine("ingrese su nombre: ");
             nombre = Console.ReadLine();
             //tiempo muerto
@@ -46,15 +74,57 @@ namespace Main
             }
 
             Console.Clear();
-
-
+            
+            opcion = "YES";
             //inicio del juego
             do
             {
                 //vidas y una variable bool que limiita si se hace una vez o otra vez
-                vidas = 9;
+                vidas = 10;
                 finish = false;
-                palabra = palabras[NumAleatorio()];
+                
+                if (opcion=="YES")
+                {
+                    Console.Write("ingrese el numero del grupo de palabras" +
+                        " \n\t1.- Figuras" +
+                        "\n\t2.- Frutas" +
+                        "\n\t3.- Animales" +
+                        "\n\t4.- Colores" +
+                        "\n\t5.- palabras largas" +
+                        "\n\t6.- programacion\n\t ->");
+                    grupo = int.Parse(Console.ReadLine());
+                    switch (grupo)
+                    {
+                        case 1:
+                            inicio = 0;
+                            final = 20;
+                            break;
+                        case 2:
+                            inicio = 21;
+                            final = 40;
+                            break;
+                        case 3:
+                            inicio = 41;
+                            final = 60;
+                            break;
+                        case 4:
+                            inicio = 61;
+                            final = 80;
+                            break;
+                        case 5:
+                            inicio = 81;
+                            final = 86;
+                            break;
+                        case 6:
+                            inicio = 87;
+                            final = 116;
+                            break;
+                    }
+                }
+
+               
+                
+                palabra = palabras[NumAleatorio(inicio,final)];
                 letras = palabra.ToCharArray();
 
 
@@ -165,7 +235,7 @@ namespace Main
 
                 }
                 //este es para volver a repetir todo el juego 
-                Console.WriteLine("volver a intentarlo? escriba <YES> o <yes> o ingrese cualquier boton para finalizar");
+                Console.Write("\nvolver a intentarlo? escriba <yes>, \nescojer otro grupo de palabras escriba <YES>\no ingrese cualquier boton para finalizar\n\t->");
                 opcion = Console.ReadLine();
 
             } while (opcion == "YES" || opcion == "yes");
@@ -177,10 +247,10 @@ namespace Main
         <-int
        funcion que me devuelve un numero aleatorio
         */
-        public static int NumAleatorio()
+        public static int NumAleatorio(int inicio,int final)
         {
 
-            int randomNumber = new Random().Next(0, palabras.Length);
+            int randomNumber = new Random().Next(inicio, final+1);
 
             return randomNumber;
         }
@@ -296,40 +366,42 @@ namespace Main
             switch (vidas)
             {
                 case 0:
-                    ahorcado10();
+                    ahorcado11();
                     break;
                 case 1:
-                    ahorcado9();
+                    ahorcado10();
                     break;
                 case 2:
-                    ahorcado8();
+                    ahorcado9();
                     break;
                 case 3:
-                    ahorcado7();
+                    ahorcado8();
                     break;
                 case 4:
-                    ahorcado6();
+                    ahorcado7();
                     break;
                 case 5:
-                    ahorcado5();
+                    ahorcado6();
                     break;
                 case 6:
-                    ahorcado4();
+                    ahorcado5();
                     break;
                 case 7:
-                    ahorcado3();
+                    ahorcado4();
                     break;
                 case 8:
-                    ahorcado2();
+                    ahorcado3();
                     break;
                 case 9:
+                    ahorcado2();
+                    break;
+                case 10:
                     ahorcado1();
                     break;
-
             }
 
         }
-        //boceto para 9 vidas
+        //boceto para 10 vidas
         public static void ahorcado1()
         {
             Console.WriteLine("|");
@@ -356,7 +428,7 @@ namespace Main
             Console.WriteLine("|");
             Console.WriteLine("-----------------");
         }
-        //boceto para 8 vidas
+        //boceto para 9 vidas
         public static void ahorcado2()
         {
             Console.WriteLine("|-----------");
@@ -384,8 +456,36 @@ namespace Main
             Console.WriteLine("-----------------");
 
         }
-        //boceto para 7 vidas
+        //boceto para 8 vidas
         public static void ahorcado3()
+        {
+            Console.WriteLine("|-----------");
+            Console.WriteLine("|  /");
+            Console.WriteLine("| /");
+            Console.WriteLine("|/");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("|");
+            Console.WriteLine("-----------------");
+
+        }
+        //boceto para 7 vidas
+        public static void ahorcado4()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -413,7 +513,7 @@ namespace Main
 
         }
         //boceto para 6 vidas 
-        public static void ahorcado4()
+        public static void ahorcado5()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -440,7 +540,7 @@ namespace Main
             Console.WriteLine("-----------------");
         }
         //boceto para 5 vidas
-        public static void ahorcado5()
+        public static void ahorcado6()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -467,7 +567,7 @@ namespace Main
             Console.WriteLine("-----------------");
         }
         //boceto para 4 vidas
-        public static void ahorcado6()
+        public static void ahorcado7()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -497,7 +597,7 @@ namespace Main
 
         }
         //boceto para 3 vidas 
-        public static void ahorcado7()
+        public static void ahorcado8()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -527,7 +627,7 @@ namespace Main
 
         }
         // boceto para 2 vidas 
-        public static void ahorcado8()
+        public static void ahorcado9()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -557,7 +657,7 @@ namespace Main
 
         }
         //boceto para 1 vida 
-        public static void ahorcado9()
+        public static void ahorcado10()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");
@@ -587,7 +687,7 @@ namespace Main
 
         }
         //boceto para 0 vidas
-        public static void ahorcado10()
+        public static void ahorcado11()
         {
             Console.WriteLine("|-----------");
             Console.WriteLine("|  /       |");

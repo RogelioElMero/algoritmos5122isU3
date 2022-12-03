@@ -1,0 +1,14 @@
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.exe
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.deps.json
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.runtimeconfig.json
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.runtimeconfig.dev.json
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.dll
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\bin\Debug\netcoreapp3.1\ahorcado.pdb
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.csproj.AssemblyReference.cache
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.AssemblyInfoInputs.cache
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.AssemblyInfo.cs
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.csproj.CoreCompileInputs.cache
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.dll
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.pdb
+C:\Users\roge_\OneDrive\Escritorio\pruebas de c# en visual estudio\ahorcado\ahorcado\obj\Debug\netcoreapp3.1\ahorcado.genruntimeconfig.cache
