@@ -53,7 +53,7 @@ namespace Main
         {
 
             string palabra, Frase, opcion = "", nombre = "";
-            int vidas, time = 200,inicio=0,final=0,grupo;
+            int vidas, time = 500,inicio=0,final=0,grupo;
             Boolean finish = false;
             char p = ' ';
             char[] letras;
@@ -133,7 +133,7 @@ namespace Main
                 Console.WriteLine("le toco una palabra de {0} de longitud", palabra.Length);
 
                 //tiempo muerto 
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < palabra.Length; i++)
                 {
 
                     Thread.Sleep(time);
